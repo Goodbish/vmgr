@@ -139,9 +139,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
         })
 
         function clearList(parent) {
-            while (parent.firstChild) {
-                parent.removeChild(parent.firstChild);
-            }
+            const keepElem = document.querySelector('.card__detail');
+            [...parent.children]
+                .forEach(child => child !== keepElem ? parent.removeChild(child) : null);
         }
 
         let promise = new Promise(function (resolve, reject) {
