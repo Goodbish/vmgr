@@ -1,0 +1,34 @@
+.map {
+    &__title {
+        font-weight: 700;
+        color: $blue-alt;
+    }
+    
+    &__list {
+        // margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__info {
+        display: flex;
+    }
+
+    &__item {
+        flex-shrink: 0;
+
+        & + & {
+            margin-left: 1rem;
+        }
+    }
+}
+
+#map {
+    width: 100%;
+    height: 100vh;
+
+    @media (max-width: 576px) {
+        width: 100vw;
+        height: -webkit-fill-available;
+    }
+}

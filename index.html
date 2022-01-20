@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="https://api-maps.yandex.ru/2.1/?apikey=9522c4cb-9617-4d35-af93-870295ebf963&lang=ru_RU" type="text/javascript">
+</script>
+<title>Document</title>
+</head>
+
+<body>
+    <aside class="aside">
+        <div class="filter">
+            <label for="filter" class="filter__title">Найдено <b><span class="filter__number">30</span> пунктов</b> выдачи заказов:</label>
+            <div class="filter__input-block">
+                <input id="filter" type="text" class="filter__input" placeholder="Поиск по адресу">
+
+                <svg class="filter__glass" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                    <title>search</title>
+                    <path d="M12.9 14.32c-1.34 1.049-3.050 1.682-4.908 1.682-4.418 0-8-3.582-8-8s3.582-8 8-8c4.418 0 8 3.582 8 8 0 1.858-0.633 3.567-1.695 4.925l0.013-0.018 5.35 5.33-1.42 1.42-5.33-5.34zM8 14c3.314 0 6-2.686 6-6s-2.686-6-6-6v0c-3.314 0-6 2.686-6 6s2.686 6 6 6v0z"></path>
+                </svg>                    
+            </div>
+        </div>
+
+        <div class="card__list">
+
+            <div class="card__detail">
+                <button class="card__back">
+                    <svg class="card__back-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                        <title>arrow-left</title>
+                        <path fill="#0057b8" d="M3.828 9l6.071-6.071-1.414-1.414-8.485 8.485 8.485 8.485 1.414-1.414-6.071-6.071h16.172v-2h-16.172z"></path>
+                    </svg>
+                        
+                    <span class="card__back-text">Все пункты выдачи</span>
+                </button>
+
+                <div class="card__detail-content">
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main">
+        <div id="map"></div>
+    </main>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
