@@ -124,6 +124,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                         renderCard(elem);
                     }
                 }
+                setToInitial();
             } else {
                 htmlList = list;
                 list.forEach(elem => {
@@ -264,7 +265,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 }))
         }
 
-        backButton.addEventListener('click', function () {
+        backButton.addEventListener('click', setToInitial);
+
+        function setToInitial() {
             detailCard.style.opacity = 0;
             detailCard.style.pointerEvents = 'none';
             document.querySelectorAll('.card__item').forEach(elem => {
@@ -276,6 +279,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 elem.balloon.close();
             })
             myMap.setCenter([59.93909, 30.315877], 12, { duration: 300 })
-        })
+        }
     }
 });
